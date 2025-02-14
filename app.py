@@ -1,6 +1,6 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
-from flask import render_template
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -35,8 +35,6 @@ def calculate_compatibility():
     return jsonify(results)
 
 if __name__ == '__main__':
-<<<<<<< HEAD
-    app.run(debug=True)
-=======
-    app.run(debug=True , host='0.0.0.0', port=5000)
->>>>>>> d122fdf (Initial backend commit)
+    if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))  # Use dynamic port for Render
+    app.run(debug=True, host='0.0.0.0', port=port)
