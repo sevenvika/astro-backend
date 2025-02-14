@@ -35,6 +35,5 @@ def calculate_compatibility():
     return jsonify(results)
 
 if __name__ == '__main__':
-    if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))  # Use dynamic port for Render
     app.run(debug=True, host='0.0.0.0', port=port)
